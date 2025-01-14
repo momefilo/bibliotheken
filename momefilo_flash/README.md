@@ -24,7 +24,7 @@ Die Bibliothek bietet vier Funktionen welche folgend erläutert sind:
 
 **void flash_init(uint8_t sektor)**\
 Der Sektor des Flash muss durch Aufruf dieser Funktion mit seiner id als
-Parameter initialisiert sein bevor auf das 63 uint32 Werte umfassende Array
+Parameter initialisiert sein bevor das 63 uint32 Werte umfassende Array
 mit den folgenden drei Funktionen genutzt werden kann.
 Ein wechsel zwischen Sektoren ist einfach durch wiederholten Aufruf dieser Funktion möglich
 
@@ -36,4 +36,4 @@ Speicher data an der Stelle id im Array des Flash
 
 **void flash_setDataRow(uint8_t start, uint8_t end, uint32_t \*data)**\
 Speichert das Array Data von dessen Beginn an, in das Array des
-Flashspeicher von start bis end
+Flashspeicher von der Stelle start bis end
