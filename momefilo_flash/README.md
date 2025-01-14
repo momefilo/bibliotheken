@@ -14,11 +14,11 @@ Verfügung stellt. Die Bibliothek verwaltet die Sektoren von 0 und am
 Adressende des Flash beginnend, so das der Bedarf von oben herab zum
 Programm-speicher wachen kann und löscht den Sektor nur mit jeder 16ten
 Änderung des Arrays. Das Ziel der „Lebensverlängerung" des Flash ist
-Fragwürdig, da ich nicht weiß ob die Beanspruchung nur beim Löschvorgang
+fragwürdig, da ich nicht weiß ob die Beanspruchung nur beim Löschvorgang
 oder auch beim Schreibvorgang die Zyklenzahl mindert. Die Bibliothek
 unterbindet während der Lösch/Schreib-Vorgänge alle Interrupts, das
 durch Auskommentieren der Zeilen 68 und 86 in momefilo_flash.c geändert
-werden.
+werden kann.
 
 Die Bibliothek bietet vier Funktionen welche folgend erläutert sind:
 
@@ -42,4 +42,4 @@ Speicher data an der Stelle id im Array des Flash
 **void flash_setDataRow(uint8_t start, uint8_t end, uint32_t \*data)**
 
 Speichert das Array Data von dessen Beginn an, in das Array des
-Flashspeicher von der start bis end
+Flashspeicher von start bis end
