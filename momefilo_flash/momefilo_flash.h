@@ -14,7 +14,7 @@
 #include "pico/stdlib.h"
 
 /* Initalisiert den Sektor sektor
- * sektor >= 0 und sektor < (Flashgroesse-4kb)/4kb
+ * sektor >= 0 und sektor < (Flashgroesse-256kb)/4kb
  * und stellt die darin gespeicherten 63 uint32_t Werte im Array bereit*/
 void flash_init(uint8_t sektor);
 
