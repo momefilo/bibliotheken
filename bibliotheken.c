@@ -1,5 +1,5 @@
 // bibliotheken
-
+#include "buzzer_sound/buzzer_sound.h"
 #include "momefilo_flash/momefilo_flash.h"
 #include <stdio.h>
 #include "pico/stdlib.h"
@@ -61,9 +61,42 @@ int flashError(){
 	return 0;
 }
 
+void sound_PeerGynt(){
+	sound_init();
+	uint8_t oktave = 1;
+	sound_play(7,4,oktave);
+	sound_play(4,4,oktave);
+	sound_play(2,4,oktave);
+	sound_play(0,4,oktave);
+	sound_play(2,4,oktave);
+	sound_play(4,4,oktave);
+	sound_play(7,4,oktave);
+	sound_play(4,4,oktave);
+	sound_play(2,4,oktave);
+	sound_play(0,4,oktave);
+	sound_play(2,8,oktave);
+	sound_play(4,8,oktave);
+	sound_play(2,8,oktave);
+	sound_play(4,8,oktave);
+	sound_play(7,4,oktave);
+	sound_play(4,4,oktave);
+	sound_play(7,4,oktave);
+	sound_play(9,4,oktave);
+	sound_play(4,4,oktave);
+	sound_play(9,4,oktave);
+	sound_play(7,4,oktave);
+	sound_play(4,4,oktave);
+	sound_play(2,4,oktave);
+	sound_play(0,1,oktave);
+}
+
 int main() {
 	stdio_init_all();
 
+	// Flash Test
 //	if(! flashError()){ printf("Flashtest ok\n"); }
+
+	// Sound Test
+	sound_PeerGynt();
 }
 
