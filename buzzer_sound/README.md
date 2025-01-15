@@ -1,6 +1,6 @@
 **buzzer_sound**\
 ist eine kleine Bibliothe die drei Oktaven auf einem am GPIO des Pico
-angeschlossenen Passiv-Buzzer spielt. Der GPIO word in buzzer_sound.h
+angeschlossenen Passiv-Buzzer spielt. Der GPIO wird in buzzer_sound.h
 zu Beginn festgelegt
 
 Die Bibliothek bietet zwei Funktionen welche folgend erläutert sind:
