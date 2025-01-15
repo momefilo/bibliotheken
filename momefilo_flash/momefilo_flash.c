@@ -61,6 +61,7 @@ void flash_init(uint8_t sektor){
 	}
 	if(! found) Pagecount = 16;
 }
+
 /* Pueft anhand von Pagecount ob die letzte der 16 Pages erreicht ist
  * und loescht in diesem Falle den gesamten 4096Byte-Sektor bevor die
  * neue Page 0 geschrieben wird*/

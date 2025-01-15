@@ -1,42 +1,69 @@
 // bibliotheken
+
 #include "momefilo_flash/momefilo_flash.h"
 #include <stdio.h>
 #include "pico/stdlib.h"
+#include <stdlib.h>
 
-void flashTest(){
-	/* Array aus 62 Integerwerten zur Prüfung*/
-	uint32_t ChkData[63];
-	for(uint32_t i=0; i<63; i++){ ChkData[i]=i; }
+int flashError(){
 
-	/* Initialisiert den letzten Sektor im Flash*/
-	flash_init(0);
+	/* Datenarrea zum testen des Flashspeichers*/
+	uint32_t testData[63];
 
-	/* Schreibt ChkData vollstaendig in die
-	 * 63 Speicherbereiche des Flash*/
+	/* anfang und ende des uint32_t Arreas*/
 	uint8_t start = 0;
 	uint8_t ende = 62;
-	flash_setDataRow(start, ende, ChkData);
 
-	/* Ueberschreibt das Array 19 mal
-	 * und überprüft dabei die Korrektheit der Daten*/
-	for(uint8_t i=0; i<19; i++){
-		uint32_t *flashData = flash_getData();
-		for(uint8_t k=0; k<63; k++){
-			if(flashData[k] != ChkData[k]){ printf("FEHLER i=%d k=%d\n", i, k);}
-			ChkData[k] = i*63 + k;
+	/* Ueberprüft 19 Sektoren von oben harab auf "Datenintegritaet"
+	 * des uint32_t Arreas, und füllt diese am Ende zur Ruekueberprufung
+	 * mit codierten Daten*/
+	for(int sektor=0; sektor<19; sektor++){
+
+		/* Array aus 63 Integerwerten zur Prüfung*/
+		for(uint32_t i=0; i<63; i++){ testData[i]=i; }
+
+		/* Initialisiert den Sektor im Flash*/
+		flash_init(sektor);
+
+		/* Schreibt testData vollstaendig in die
+		 * 63 Speicherbereiche des Flash-Sektors*/
+		flash_setDataRow(start, ende, testData);
+
+		/* Ueberschreibt den Sektor 19 mal
+		 * und überprüft dabei die Korrektheit der Daten*/
+		for(uint8_t i=0; i<19; i++){
+			uint32_t *flashData = flash_getData();
+			for(uint8_t k=0; k<63; k++){
+				if(flashData[k] != testData[k]){
+					printf("FEHLER i=%d k=%d\n", i, k);
+					return 1;
+				}
+				testData[k] = i*63 + k;
+			}
+			flash_setDataRow(start, ende, testData);
 		}
-		flash_setDataRow(start, ende, ChkData);
+
+		/*fuellt den Flash-Sektor mit codierten Daten*/
+		for(uint32_t i=0; i<63; i++){ testData[i] = sektor * i; }
+		flash_setDataRow(start, ende, testData);
 	}
+
+	/*Fuehrt die Rueckueberpfuefung der codierten Daten aus*/
+	for(int sektor=0; sektor<19; sektor++){
+		flash_init(sektor);
+		for(uint32_t i=0; i<63; i++){
+			if(flash_getData()[i] != sektor * i){
+				printf("FEHLER Sektor=%d\n", i);
+				return 1;
+			}
+		}
+	}
+	return 0;
 }
 
 int main() {
 	stdio_init_all();
-	// flashTest-programm
-	for(int i=0; i<19; i++){
-		printf("\n---Sektor %d ---\n", i);
-		flash_init(i);
-		flashTest();
-	}
-	printf("Flashtest ende\n");
+
+//	if(! flashError()){ printf("Flashtest ok\n"); }
 }
 

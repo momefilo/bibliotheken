@@ -11,5 +11,6 @@ add_subdirectory(./momefilo_flash)
 
 target_link_libraries(bibliotheken
 	momefilo_flash
-	pico_stdlib)
+	pico_stdlib
+	pico_rand)
 pico_add_extra_outputs(bibliotheken)
