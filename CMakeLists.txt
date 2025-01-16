@@ -7,12 +7,13 @@ pico_sdk_init()
 add_executable(bibliotheken bibliotheken.c )
 
 # Bibliotheksverzeichnisse
+add_subdirectory(./ili_9341)
 add_subdirectory(./buzzer_sound)
 add_subdirectory(./momefilo_flash)
 
 target_link_libraries(bibliotheken
+	ili_9341
 	buzzer_sound
 	momefilo_flash
-	pico_stdlib
-	pico_rand)
+	pico_stdlib)
 pico_add_extra_outputs(bibliotheken)
