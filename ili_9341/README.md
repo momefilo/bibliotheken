@@ -5,9 +5,9 @@ es können Rechtecke, Farbverlaufsrechtecke und beliebige Farbinformation
 gezeichnet werden. Die Touchfunktion des Displays kann aktiviert und die
 Koordinaten der Berührung abgefragt werden. Die GPIO-Zuordnng ist zu
 Beginn in der "ili_9341.c"-Datei anzupassen.\
-Die Funktionen der Bibliothek sind folgend erlaeutert\
+Die Funktionen der Bibliothek sind folgend erlaeutert
 
-**void ili9341_init()**
+**void ili9341_init()**\
 Ist einmalig vor Benutzung der Funktionen aufzurufen
 
 **void setOrientation(uint8_t ori)**\
