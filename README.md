@@ -30,7 +30,7 @@ Wenn die daten in einen ili9314-LCD angezeigt werden muessen nur die
 ersten fuenf code-Zeilen, der Graphik entsprechend in "rgb2header.c"
 editiert werden. Ansonsten ist in Code-Zeile 53 zusaetzlich das Startbyte
 (hier 0x2C) entsprechend zu aendern.\
-Eine genaue Dokumentation findet sich in den Kommentaren der "(rgb2header.c)(https://github.com/momefilo/bibliotheken/blob/main/ili_9341/tools/rgb2header.c)"-Datei.
+Eine genaue Dokumentation findet sich in den Kommentaren der "[rgb2header.c](https://github.com/momefilo/bibliotheken/blob/main/ili_9341/tools/rgb2header.c)"-Datei.
 Als Beispiel dient im Programmcode der das fraktal_240x135.data,
 das Programm muss mit **"gcc -o rgb2header rgb2header.c"** kompiliert werden damit es ausfuehrbar wird
 
