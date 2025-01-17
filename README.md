@@ -12,7 +12,7 @@ zu Beginn festgelegt\
 Siehe Genaueres in buzzer_sound/README.md
 
 * **LCD ili_9341**\
-Diese Bibliothekt bietet je eine Textfunktion mit 12x12 und mit 16x16
+Diese Bibliothekt bietet je eine Textfunktion mit 12x12 und eine mit 16x16
 Pixel Zeichengroesse. Die Text- und Hintergrundfarbe sind änderbar, und
 es können Rechtecke, Farbverlaufsrechtecke und beliebige Farbinformation
 gezeichnet werden. Die Touchfunktion des Displays kann aktiviert und die
