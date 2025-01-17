@@ -78,7 +78,7 @@ int einfach(){
 
 /* Beispiel einer Kolonnenvrarbeitung mehrer Graphiken in einen Header
  * ueber den dann programmatisch iteriert werden kann.
- * Die Eingabe-Dateinamen lauten fortlaufend "d0.data, d1.data, .."
+ * Die Eingabe-Dateinamen lauten fortlaufend "d0_15x20.data, d1_15x20.data, .."
  * die Anzahl der Bilder ist 10 im Format 10x15 und am Ende wird ein
  * schwarzes Bild eingefuegt. Der Header enthaelt ein zwei-
  * dimensionales Arrea das elf uint8-Arreas enthaelt

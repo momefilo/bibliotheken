@@ -1,5 +1,5 @@
 **LCD st_7735**\
-Diese Bibliothek bietet je eine Textfunktionen mit 12x12 und mit 16x16
+Diese Bibliothek bietet je eine Textfunktion mit 12x12 und einr mit 16x16
 Pixel Zeichengroesse. Die Text- und Hintergrundfarbe sind änderbar.
 Und ein Funktion um beliebige Pixelinformation auf das display zu schreiben.\
 Die GPIO-Zuordnng ist zu Beginn in der "ili_9341.c"-Datei anzupassen.\

@@ -20,7 +20,7 @@ Koordinaten der Berührung abgefragt werden.\
 Siehe Genaueres in ili_9341/README.md
 
 * **LCD st_7735**\
-Diese Bibliothek bietet je eine Textfunktion mit 12x12 und mit 16x16
+Diese Bibliothek bietet je eine Textfunktion mit 12x12 und eine mit 16x16
 Pixel Zeichengroesse. Die Text- und Hintergrundfarbe sind änderbar.
 Und ein Funktion um beliebige Pixelinformation auf das display zu schreiben.\
 Siehe Genaueres in ili_9341/README.md
