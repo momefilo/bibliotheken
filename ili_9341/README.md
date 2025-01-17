@@ -1,5 +1,5 @@
 **LCD ili_9341**\
-Diese Bibliothek bietet je eine Textfunktionen mit 12x12 und mit 16x16
+Diese Bibliothek bietet je eine Textfunktion mit 12x12 und mit 16x16
 Pixel Zeichengroesse. Die Text- und Hintergrundfarbe sind änderbar, und
 es können Rechtecke, Farbverlaufsrechtecke und beliebige Farbinformation
 gezeichnet werden. Die Touchfunktion des Displays kann aktiviert und die
