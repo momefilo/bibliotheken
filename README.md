@@ -19,12 +19,6 @@ gezeichnet werden. Die Touchfunktion des Displays kann aktiviert und die
 Koordinaten der Berührung abgefragt werden.\
 Siehe Genaueres in ili_9341/README.md
 
-* **LCD st_7735**\
-Diese Bibliothek bietet je eine Textfunktion mit 12x12 und eine mit 16x16
-Pixel Zeichengroesse. Die Text- und Hintergrundfarbe sind änderbar.
-Und ein Funktion um beliebige Pixelinformation auf das display zu schreiben.\
-Siehe Genaueres in ili_9341/README.md
-
 * **ili_9341/tools/rgb2header**\
 NON PICO, muss auf dem Entwicklungs-PC ausgefuehrt werden!\
 Dieses Programm wandelt die 24Bit-RGB-Pixel einer Eingabedatei
@@ -38,3 +32,9 @@ editiert werden. Ansonsten ist in Code-Zeile 53 zusaetzlich das Startbyte
 (hier 0x2C) entsprechend zu aendern.\
 Als Beispielt dient im Programmcode der "rgb2header.c" das fraktal_240x135.data,
 das Programm muss mit **"gcc -o rgb2header rgb2header.c"** kompiliert werden damit es ausfuehrbar wird
+
+* **LCD st_7735**\
+Diese Bibliothek bietet je eine Textfunktion mit 12x12 und eine mit 16x16
+Pixel Zeichengroesse. Die Text- und Hintergrundfarbe sind änderbar.
+Und ein Funktion um beliebige Pixelinformation auf das display zu schreiben.\
+Siehe Genaueres in ili_9341/README.md
