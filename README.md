@@ -6,7 +6,7 @@ Komfortable Flashverwaltung mit einer Lese- und zwei Schreibfunktionen\
 Siehe Genaueres in momefilo_flash/README.md
 
 * **buzzer_sound**\
-ist eine kleine Bibliothe die drei Oktaven auf einem am GPIO des Pico
+ist eine kleine Bibliothek die drei Oktaven auf einem am GPIO des Pico
 angeschlossenen Passiv-Buzzer spielt. Der GPIO wird in buzzer_sound.h
 zu Beginn festgelegt\
 Siehe Genaueres in buzzer_sound/README.md
