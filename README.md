@@ -26,7 +26,7 @@ Und ein Funktion um beliebige Pixelinformation auf das display zu schreiben.\
 Siehe Genaueres in ili_9341/README.md
 
 * **ili_9341/tools/rgb2header**\
-NON PICO, muss auf der Entwicklungs-PC ausgefuehrt werden
+NON PICO, muss auf dem Entwicklungs-PC ausgefuehrt werden
 Dieses Programm wandelt die 24Bit-RGB-Pixel einer Eingabedatei
 in R5G6B5-Pixel um die viele LCD-Displays darstellen koennen,
 und schreibt sie als text in eine Headerdatei.\
