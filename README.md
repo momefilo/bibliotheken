@@ -18,3 +18,9 @@ es können Rechtecke, Farbverlaufsrechtecke und beliebige Farbinformation
 gezeichnet werden. Die Touchfunktion des Displays kann aktiviert und die
 Koordinaten der Berührung abgefragt werden.\
 Siehe Genaueres in ili_9341/README.md
+
+* **LCD st_7735**\
+Diese Bibliothek bietet je eine Textfunktionen mit 12x12 und mit 16x16
+Pixel Zeichengroesse. Die Text- und Hintergrundfarbe sind änderbar.
+Und ein Funktion um beliebige Pixelinformation auf das display zu schreiben.\
+Siehe Genaueres in ili_9341/README.md

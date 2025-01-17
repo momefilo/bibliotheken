@@ -54,7 +54,8 @@ Zeichnet die 565bit-farbcodierten Daten in den
 durch area bezeichneten Bereich\
 area[0]: position x.start, area[1] position y.start\
 area[2] position x.end, area[3] position y.end\
-\*data: die Daten die gezeichnet werden
+\*data: Die Anfangsadresse des 565-Farbcodierten Speicherberichs der
+auf das Display geschrieben wird
 
 **void paintRectGradient(uint16_t *area, uint16_t color1, uint16_t color2)**\
 565-Bit RGB-Farbwert

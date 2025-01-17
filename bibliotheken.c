@@ -1,10 +1,12 @@
 // bibliotheken
-#include "ili_9341/ili_9341.h"
-#include "buzzer_sound/buzzer_sound.h"
+//#include "st_7735/st_7735.h"// es kann nur ein Display eingebunden werden
+#include "ili_9341/ili_9341.h"// es kann nur ein Display eingebunden werden
+#include "ili_9341/tools/fraktal_240x135.h"// Bilddatei
 #include "momefilo_flash/momefilo_flash.h"
-#include <stdio.h>
+#include "buzzer_sound/buzzer_sound.h"
 #include "pico/stdlib.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 int flashError(){
 
@@ -62,6 +64,7 @@ int flashError(){
 	return 0;
 }
 
+
 void sound_PeerGynt(){
 	sound_init();
 	uint8_t oktave = 1;
@@ -94,8 +97,49 @@ void sound_PeerGynt(){
 int main() {
 	stdio_init_all();
 
-	// Flash Test
-//	if(! flashError()){ printf("Flashtest ok\n"); }
+	// Flash Test: Flash nicht unnötig belasten, auskommentiert
+/*	if(! flashError()){ printf("Flashtest ok\n"); }
+*/
+	/* st_7735 Test: muss für ili_9341 Test auskommentiert sein
+	 * sowie Headereinbindung hier oben und in CMakeLists.txt*/
+/*	st7735_init();
+	uint8_t bgcolor[] = {0xF, 0x0, 0x8}; // Rot, Gruen, Blau
+	setBgColor(bgcolor);
+	clearScreen();
+	char *text = "momefilo";
+	uint8_t pos[] = {16, 5};
+	writeText16x16(pos, text, 8, false, false);
+
+	uint8_t fgcolor[] = {0x0, 0x0, 0xF};
+	char *text2 = "desing";
+	uint8_t pos2[] = {4, 2};
+	setFgColor(fgcolor);
+	writeText12x12(pos2, text2, 6, false, true);
+*/
+	/* ili_9341 Test: muss für st7735 Test auskommentiert sein
+	 * sowie Headereinbindung hier oben und in CMakeLists.txt*/
+	ili9341_init();
+	uint16_t bgcolor = 0xF818;
+	setBgColor(bgcolor);
+	clearScreen();
+	setOrientation(VERTICAL);
+	uint16_t area[] = {0, 65, 239, 199};
+	drawRect(area, BILD);
+
+	uint16_t fgcolor = 0x881F;
+	setFgColor(fgcolor);
+	char *text = "momefilo";
+	uint16_t pos[] = {4, 1};
+	writeText16x16(pos, text, 8, false,true);
+	uint16_t pos2[] = {7, 3};
+	char *text2 = "desing";
+	setFgColor(0x07E0);
+	writeText12x12(pos2, text2, 6, false,true);
+
+	setOrientation(HORIZONTAL);
+	uint16_t area2[] ={ 0, 0, 119, 239 };
+	uint16_t color1 = 0xF81F, color2 = 0x001F;
+	paintRectGradient(area2, color1, color2);
 
 	// Sound Test
 	sound_PeerGynt();
