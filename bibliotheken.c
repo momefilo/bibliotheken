@@ -1,7 +1,8 @@
 // bibliotheken
+#include "buttons/buttons.h"
 //#include "st_7735/st_7735.h"// es kann nur ein Display eingebunden werden
-#include "ili_9341/ili_9341.h"// es kann nur ein Display eingebunden werden
-#include "ili_9341/tools/fraktal_240x135.h"// Bilddatei
+//#include "ili_9341/ili_9341.h"// es kann nur ein Display eingebunden werden
+//#include "ili_9341/tools/fraktal_240x135.h"// Bilddatei
 #include "momefilo_flash/momefilo_flash.h"
 #include "buzzer_sound/buzzer_sound.h"
 #include "pico/stdlib.h"
@@ -64,7 +65,6 @@ int flashError(){
 	return 0;
 }
 
-
 void sound_PeerGynt(){
 	sound_init();
 	uint8_t oktave = 1;
@@ -94,52 +94,118 @@ void sound_PeerGynt(){
 	sound_play(0,1,oktave);
 }
 
-int main() {
-	stdio_init_all();
-
-	// Flash Test: Flash nicht unnötig belasten, auskommentiert
-/*	if(! flashError()){ printf("Flashtest ok\n"); }
-*/
+void st7735_Test(){
 	/* st_7735 Test: muss für ili_9341 Test auskommentiert sein
 	 * sowie Headereinbindung hier oben und in CMakeLists.txt*/
-/*	st7735_init();
+
+/*	// Displayinitialisieren
+	st7735_init();
+
+	// Farbe definieren
 	uint8_t bgcolor[] = {0xF, 0x0, 0x8}; // Rot, Gruen, Blau
+	// Hintergrundfarbe setzen
 	setBgColor(bgcolor);
+	//Display mit Hintergrundfarbe fuellen
 	clearScreen();
+
+	// Text definieren
 	char *text = "momefilo";
+	// Position des Textes (x,y) in Pixel definieren
 	uint8_t pos[] = {16, 5};
+	// Text schreiben matrix=false / Pos in Pixel
 	writeText16x16(pos, text, 8, false, false);
 
+	// Textfarbe definieren
 	uint8_t fgcolor[] = {0x0, 0x0, 0xF};
+	// Text definieren
 	char *text2 = "desing";
+	// Position des Textes in (Spalte,Zeile) Zeichen definieren
 	uint8_t pos2[] = {4, 2};
+	// Textfarbe setzen
 	setFgColor(fgcolor);
+	// Text schreiben matrix=true / Pos in Zeichen
 	writeText12x12(pos2, text2, 6, false, true);
 */
+}
+
+void ili9341_Test(){
 	/* ili_9341 Test: muss für st7735 Test auskommentiert sein
 	 * sowie Headereinbindung hier oben und in CMakeLists.txt*/
+/*
+	// Display initialisieren
 	ili9341_init();
+
+	// Hintergrundfarbe definiren
 	uint16_t bgcolor = 0xF818;
+
+	// Hintergrundfarbe setzen
 	setBgColor(bgcolor);
+
+	// Display mit Hintergrundfabr fuellen
 	clearScreen();
+
+	// Orientierung auf Vertikal setzen
 	setOrientation(VERTICAL);
+
+	// Einen Bereich des Displays in Pixel definieren
 	uint16_t area[] = {0, 65, 239, 199};
+
+	// Ein Bild auf das Display schreiben
+	// Das Bild ist als #include "ili_9341/tools/fraktal_240x135.h" eingebunden
 	drawRect(area, BILD);
 
+	// Textfarbe definieren
 	uint16_t fgcolor = 0x881F;
+	// Textfarbe setzen
 	setFgColor(fgcolor);
+	// Text definieren
 	char *text = "momefilo";
+	// Position des Textes (Spalte,Zeile) in Zeichen definieren
 	uint16_t pos[] = {4, 1};
+	// Text schreiben
 	writeText16x16(pos, text, 8, false,true);
+
+	//weiteren Text schreiben
 	uint16_t pos2[] = {7, 3};
 	char *text2 = "desing";
 	setFgColor(0x07E0);
 	writeText12x12(pos2, text2, 6, false,true);
 
+	//einen Gradienten Zeichnen
 	setOrientation(HORIZONTAL);
+	// Bereich des Displays in Pixel definieren
 	uint16_t area2[] ={ 0, 0, 119, 239 };
+	// zwei Farben definieren
 	uint16_t color1 = 0xF81F, color2 = 0x001F;
+	// Farbverlauf zeichnen
 	paintRectGradient(area2, color1, color2);
+*/
+}
+
+void button_Test(){
+
+	// initialisiert die Buttons
+	buttons_init();
+
+	// gibt den aktuell gedrueckten Butten zurueck
+	// oder 100 wenn kein Button gedrueckt ist
+	printf("Button %d\n", get_Button());
+}
+
+int main() {
+	stdio_init_all();
+
+	// Flash Test: Flash nicht unnötig belasten, auskommentiert
+//	if(! flashError()){ printf("Flashtest ok\n"); }
+
+
+//	st7735_Test()
+
+//	ili9341_Test();
+
+	// buttons Test
+	// wartet bis eine Taste gedrueckt wird
+//	while(get_Button() == 100){}
 
 	// Sound Test
 	sound_PeerGynt();
