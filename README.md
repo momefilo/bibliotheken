@@ -11,6 +11,11 @@ angeschlossenen Passiv-Buzzer spielt. Der GPIO wird in buzzer_sound.h
 zu Beginn festgelegt\
 Siehe Genaueres in buzzer_sound/README.md
 
+* **buttons**\
+Software-Entprellung von Tastern\
+Es werden vier Taster abgefragt die mit zwei Zeitvariablen entprellt sind.\
+Genaueres ist in buttons/README.md zu finden
+
 * **LCD ili_9341**\
 Diese Bibliothekt bietet je eine Textfunktion mit 12x12 und eine mit 16x16
 Pixel Zeichengroesse. Die Text- und Hintergrundfarbe sind änderbar, und
