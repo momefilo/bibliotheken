@@ -16,6 +16,13 @@ Software-Entprellung von Tastern\
 Es werden vier Taster abgefragt die mit zwei Zeitvariablen entprellt sind.\
 Genaueres ist in buttons/README.md zu finden
 
+* **drehgeber**\
+Eine Entprellung für Drehgeber anhand des KY-040\
+Mit der Pulsdauer, der Pauasendauer zwischen den Pulsen,\
+der Anzahl an Pulsen pro Richtung sowie der Pausendauer zwischen
+den Schalzwechseln/Geberstellungen laesst sich das kleine Programm
+an spezifische Hardware anpassen
+
 * **LCD ili_9341**\
 Diese Bibliothekt bietet je eine Textfunktion mit 12x12 und eine mit 16x16
 Pixel Zeichengroesse. Die Text- und Hintergrundfarbe sind änderbar, und

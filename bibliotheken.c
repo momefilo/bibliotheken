@@ -1,4 +1,5 @@
 // bibliotheken
+#include "drehgeber/drehgeber.h"
 #include "buttons/buttons.h"
 //#include "st_7735/st_7735.h"// es kann nur ein Display eingebunden werden
 //#include "ili_9341/ili_9341.h"// es kann nur ein Display eingebunden werden
@@ -182,18 +183,17 @@ void ili9341_Test(){
 */
 }
 
-void button_Test(){
-
-	// initialisiert die Buttons
-	buttons_init();
-
-	// gibt den aktuell gedrueckten Butten zurueck
-	// oder 100 wenn kein Button gedrueckt ist
-	printf("Button %d\n", get_Button());
-}
-
 int main() {
 	stdio_init_all();
+	drehgeber_init();
+	while(true){
+		uint8_t button = drehgeber_get();
+		if(button != 0){
+			if(button == IN_LEFT){ printf("Links\n"); }
+			if(button == IN_RIGHT){ printf("Rechts\n"); }
+			if(button == IN_PRESS){ printf("Druck\n"); }
+		}
+	}
 
 	// Flash Test: Flash nicht unnötig belasten, auskommentiert
 //	if(! flashError()){ printf("Flashtest ok\n"); }
@@ -204,6 +204,7 @@ int main() {
 //	ili9341_Test();
 
 	// buttons Test
+//	buttons_init();
 	// wartet bis eine Taste gedrueckt wird
 //	while(get_Button() == 100){}
 
