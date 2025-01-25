@@ -51,3 +51,12 @@ Diese Bibliothek bietet je eine Textfunktion mit 12x12 und eine mit 16x16
 Pixel Zeichengroesse. Die Text- und Hintergrundfarbe sind änderbar.
 Und ein Funktion um beliebige Pixelinformation auf das display zu schreiben.\
 Siehe Genaueres in st7735/README.md
+
+* **OLED sh_1106**\
+Bietet je eine Schreibfunktion in font8x8 und 12x16 nur im Querformat\
+Die SH1106 Displays ist in Zeilen mit je acht Pixel an Hoehe aufgeteilt.\
+Die Bibliothek Teilt die Pixelmatrix des Displays in eine Zeichenmatrix
+und verlang als Parameter der Schreibfunktionen die Position in
+dieser Zeichenmatrix. Bei einem 132x64 Display gibt es vier Zeilen mit
+jeweils 11 Zeichen im Font 8x16 und jeweils doppelt so viele in font 8x8
+So ist die Position (2,3) Das zweite Zeichen von rechts in der dritten Zeile.

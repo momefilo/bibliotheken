@@ -7,6 +7,7 @@ pico_sdk_init()
 add_executable(bibliotheken bibliotheken.c )
 
 # Bibliotheksverzeichnisse
+add_subdirectory(./sh_1106)
 add_subdirectory(./drehgeber)
 add_subdirectory(./buttons)
 add_subdirectory(./st_7735)
@@ -15,6 +16,7 @@ add_subdirectory(./buzzer_sound)
 add_subdirectory(./momefilo_flash)
 
 target_link_libraries(bibliotheken
+	sh_1106
 	drehgeber
 	buttons
 #	st_7735

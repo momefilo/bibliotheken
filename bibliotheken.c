@@ -1,6 +1,7 @@
 // bibliotheken
+#include "sh_1106/sh_1106.h"
 #include "drehgeber/drehgeber.h"
-#include "buttons/buttons.h"
+//#include "buttons/buttons.h"
 //#include "st_7735/st_7735.h"// es kann nur ein Display eingebunden werden
 //#include "ili_9341/ili_9341.h"// es kann nur ein Display eingebunden werden
 //#include "ili_9341/tools/fraktal_240x135.h"// Bilddatei
@@ -185,6 +186,7 @@ void ili9341_Test(){
 
 int main() {
 	stdio_init_all();
+	sh1106_init();
 	drehgeber_init();
 	while(true){
 		uint8_t button = drehgeber_get();
