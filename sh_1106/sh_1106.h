@@ -24,7 +24,7 @@
 void sh1106_init();
 
 /* Leert das Display */
-void clear_screen();
+void sh1106_clear_screen();
 
 /* pos:= uint8_t[x,y]
  * text:= uint8_t["text"]

@@ -27,7 +27,7 @@ void set_startpoit(uint8_t col, uint8_t page){
 	snd_cmd(0xB0 | (0x0F & page)); //page bits
 }
 
-void clear_screen(){
+void sh1106_clear_screen(){
 	uint8_t buf[132];
 	for(int i=0; i<132; i++){ buf[i] = 0x00; }
 	for(int i=0; i<8; i++){
