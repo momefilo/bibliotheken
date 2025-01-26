@@ -18,6 +18,7 @@
 #define PIN_SDA 4
 #define PIN_SCL 5
 
+#include "pico/stdlib.h"
 /* Initialisiert das Display und ist einmalig vor Benutzung der
  * aufzurufen */
 void sh1106_init();
