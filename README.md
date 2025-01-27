@@ -63,5 +63,5 @@ jeweils 11 Zeichen im Font 8x16 und jeweils doppelt so viele in font 8x8
 So ist die Position (2,3) Das zweite Zeichen von rechts in der dritten Zeile.
 Es sind noch zwei primitive Schreibfuntionen hinzugekommen mit denn jeweil nur
 eine Spalte in einer Page, und eine mit mehreren Spalten in einer Page schreiben\
-Siehe sh_1106/README.MD
+Siehe sh_1106/README.MD\
 Eine genau beschreibung findet sich in den Komentaren in sh_1106.h
