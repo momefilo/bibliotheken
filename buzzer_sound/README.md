@@ -12,4 +12,5 @@ Muss einmal vor Benutzung von sound_play() aufgerufen sein
 Gibt Töne auf dem Passiv-Buzzer aus\
 note: 0=C bis 11=B\
 dauer: teilt die 1,5 Sekuden Tondauer\
-oktave: 0=Grundoktave, 1=eine Oktave hoeher, 2=zwei Oktaven hoeher
+oktave: 0=Grundoktave, 1=eine Oktave hoeher, 2=zwei Oktaven hoeher\
+Eine genaue Beschreibung findet sich in den Komentaren in buzzer_sound.h

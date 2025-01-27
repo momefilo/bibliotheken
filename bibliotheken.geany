@@ -46,10 +46,11 @@ file_patterns=
 base_path=/home/momefilo/pico/projekte/geany/bibliotheken
 
 [files]
-current_page=0
-FILE_NAME_0=4963;C;0;EUTF-8;1;1;0;%2Fhome%2Fmomefilo%2Fpico%2Fprojekte%2Fgeany%2Fbibliotheken%2Fbibliotheken.c;0;4
-FILE_NAME_1=724;C++;0;EUTF-8;1;1;0;%2Fhome%2Fmomefilo%2Fpico%2Fprojekte%2Fgeany%2Fbibliotheken%2Fsh_1106%2Fsh_1106.h;0;4
-FILE_NAME_2=2966;Markdown;0;EUTF-8;1;1;0;%2Fhome%2Fmomefilo%2Fpico%2Fprojekte%2Fgeany%2Fbibliotheken%2FREADME.md;0;4
+current_page=3
+FILE_NAME_0=5245;C;0;EUTF-8;1;1;0;%2Fhome%2Fmomefilo%2Fpico%2Fprojekte%2Fgeany%2Fbibliotheken%2Fbibliotheken.c;0;4
+FILE_NAME_1=1215;C;0;EUTF-8;1;1;0;%2Fhome%2Fmomefilo%2Fpico%2Fprojekte%2Fgeany%2Fbibliotheken%2Fsh_1106%2Fsh_1106.c;0;4
+FILE_NAME_2=1389;C++;0;EUTF-8;1;1;0;%2Fhome%2Fmomefilo%2Fpico%2Fprojekte%2Fgeany%2Fbibliotheken%2Fsh_1106%2Fsh_1106.h;0;4
+FILE_NAME_3=2851;Markdown;0;EUTF-8;1;1;0;%2Fhome%2Fmomefilo%2Fpico%2Fprojekte%2Fgeany%2Fbibliotheken%2FREADME.md;0;4
 
 [VTE]
 last_dir=/home/momefilo

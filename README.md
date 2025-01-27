@@ -1,5 +1,5 @@
 **Pi Pico Bibliotheken zum Einbinden in Programmcode**\
-In der Datei "bibliotheken.c" finden sich Test- und Beispielcode
+In der Datei "bibliotheken.c" finden sich Test- und Beispielcode zum Einbinden der Bibliotheken
 
 * **momefilo_flash**\
 Komfortable Flashverwaltung mit einer Lese- und zwei Schreibfunktionen\
@@ -22,6 +22,7 @@ Mit der Pulsdauer, der Pauasendauer zwischen den Pulsen,\
 der Anzahl an Pulsen pro Richtung sowie der Pausendauer zwischen
 den Schalzwechseln/Geberstellungen laesst sich das kleine Programm
 an spezifische Hardware anpassen
+Genaueres ist in drehgeber.h zu finden
 
 * **LCD ili_9341**\
 Diese Bibliothekt bietet je eine Textfunktion mit 12x12 und eine mit 16x16
@@ -54,9 +55,13 @@ Siehe Genaueres in st7735/README.md
 
 * **OLED sh_1106**\
 Bietet je eine Schreibfunktion in font8x8 und 12x16 nur im Querformat\
-Die SH1106 Displays ist in Zeilen mit je acht Pixel an Hoehe aufgeteilt.\
+Die SH1106 Displays sind in Zeilen mit je acht Pixel an Hoehe aufgeteilt.\
 Die Bibliothek Teilt die Pixelmatrix des Displays in eine Zeichenmatrix
 und verlang als Parameter der Schreibfunktionen die Position in
 dieser Zeichenmatrix. Bei einem 132x64 Display gibt es vier Zeilen mit
 jeweils 11 Zeichen im Font 8x16 und jeweils doppelt so viele in font 8x8
 So ist die Position (2,3) Das zweite Zeichen von rechts in der dritten Zeile.
+Es sind noch zwei primitive Schreibfuntionen hinzugekommen mit denn jeweil nur
+eine Spalte in einer Page, und eine mit mehreren Spalten in einer Page schreiben\
+Siehe sh_1106/README.MD
+Eine genau beschreibung findet sich in den Komentaren in sh_1106.h

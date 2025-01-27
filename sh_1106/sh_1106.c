@@ -36,6 +36,16 @@ void sh1106_clear_screen(){
 	}
 }
 
+void sh1106_datacol(uint8_t col, uint8_t page, uint8_t *data){
+	set_startpoit(col+2, page);
+	snd_data(data, 1);
+}
+
+void sh1106_datapage(uint8_t startcol, uint8_t page, uint8_t *data, uint8_t len){
+	set_startpoit(startcol+2, page);
+	snd_data(data, len);
+}
+
 void sh1106_text12x16(uint8_t *pos, uint8_t *text, bool invert){
 	// Zeichen fuer Zeichen
 	for(int i=0; i<strlen(text); i++){

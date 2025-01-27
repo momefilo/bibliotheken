@@ -187,15 +187,6 @@ void ili9341_Test(){
 int main() {
 	stdio_init_all();
 	sh1106_init();
-	drehgeber_init();
-	while(true){
-		uint8_t button = drehgeber_get();
-		if(button != 0){
-			if(button == IN_LEFT){ printf("Links\n"); }
-			if(button == IN_RIGHT){ printf("Rechts\n"); }
-			if(button == IN_PRESS){ printf("Druck\n"); }
-		}
-	}
 
 	// Flash Test: Flash nicht unnötig belasten, auskommentiert
 //	if(! flashError()){ printf("Flashtest ok\n"); }
@@ -211,6 +202,6 @@ int main() {
 //	while(get_Button() == 100){}
 
 	// Sound Test
-	sound_PeerGynt();
+//	sound_PeerGynt();
 }
 

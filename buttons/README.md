@@ -9,5 +9,6 @@ Die GPIO-Zuordnung erfolg in der "buttons.h"-Datei
 Ist einmalig vor Benutzung der Funktionen aufzurufen
 
 **void get_Button()**\
-Gibt den, laut GPIO-Zuordnung, aktuell gedrueckten Taster zuruek oder 100 wenn kein Taster betaetigt ist.
+Gibt den, laut GPIO-Zuordnung, aktuell gedrueckten Taster zuruek oder 100 wenn kein Taster betaetigt ist.\
+Eine genaue Beschreibung findet sich in den Komentaren in buttons.h
 

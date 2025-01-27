@@ -36,4 +36,5 @@ Speicher data an der Stelle id im Array des Flash
 
 **void flash_setDataRow(uint8_t start, uint8_t end, uint32_t \*data)**\
 Speichert das Array Data von dessen Beginn an, in das Array des
-Flashspeicher von der Stelle start bis end
+Flashspeicher von der Stelle start bis end\
+Eine genaue Beschreibung findet sich in den Komentaren in momefilo_flash.h

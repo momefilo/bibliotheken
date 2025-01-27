@@ -70,4 +70,5 @@ einmalig aufgerufen sein
 Gibt die Position als Array [x,y]=[0..240, 0..320] der Berührung
 oder [0xffff, 0xffff] bei keiner Berührung des Displays zurueck.
 Unabhaengig von der Orientierung werden die Koordinaten X der schmalen
-Seite und Y der breiten Seite zugeordnet
+Seite und Y der breiten Seite zugeordnet\
+Eine genaue Beschreibung findet sich in den Komentaren in ili_9341.h

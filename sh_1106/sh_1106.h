@@ -36,4 +36,16 @@ void sh1106_text12x16(uint8_t *pos, uint8_t *text, bool invert);
  * invert:= text wird invertiert dargestellt */
 void sh1106_text8x8(uint8_t *pos, uint8_t *text, bool invert);
 
+/* Schreibt das Byte als Spalte in die Page
+ * col:= Die Spalte die geschrieben wird
+ * page:= Die Page in der die Spalte geschrieben wird
+ * data:= Das Byte das geschrieben wird */
+void sh1106_datacol(uint8_t col, uint8_t page, uint8_t *data);
+
+/* Schreibt die Bytes als Spalten in eine Page
+ * startcol:= Die erste der Spalten die geschrieben wird
+ * page:= Die Page in der die Spalten geschrieben wird
+ * data:= Die Bytes welche als Spalten in die Page geschrieben werden */
+void sh1106_datapage(uint8_t startcol, uint8_t page, uint8_t *data, uint8_t len);
+
 #endif

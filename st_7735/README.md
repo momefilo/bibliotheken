@@ -53,5 +53,6 @@ durch area bezeichneten Bereich\
 area[0]: position x.start, area[1] position y.start\
 area[2] position x.end, area[3] position y.end\
 Data ist die Anfangsadresse das 12 Farbbits pro Pixel umfassenden
-Speicherbereichs der auf das Display geschrieben wird
+Speicherbereichs der auf das Display geschrieben wird\
+Eine genaue Beschreibung findet sich in den Komentaren in st_7735.h
 

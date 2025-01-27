@@ -5,7 +5,7 @@
 /* Variablen zur Entprellung */
 bool Button_pressed = false;
 int WaitTime = 5;
-int HoldTime = 120;
+int HoldTime = 70;
 
 void buttons_init(){
 	gpio_init(BUTTON_R);
