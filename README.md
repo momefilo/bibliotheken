@@ -1,6 +1,13 @@
 **Pi Pico Bibliotheken zum Einbinden in Programmcode**\
 In der Datei "bibliotheken.c" finden sich Test- und Beispielcode zum Einbinden der Bibliotheken
 
+* **SI5351**\
+Diese Bibliothek bietet zwei voneinender unabhängige Taktgeber mit einem si5351.\
+Der Frequenzbereich ist 8kHz bis 160Mhz.\
+Der Taktgeber mit der freq0 wird an ckl0, und invertiert an ckl1 ausgeben\
+Der Taktgeber mit der freq2 wird an ckl2 ausgeben\
+Bei Frequenzen <8kHz und >160MHz wird der entsprechende Ausgang HiZ\
+
 * **momefilo_flash**\
 Komfortable Flashverwaltung mit einer Lese- und zwei Schreibfunktionen\
 Siehe Genaueres in momefilo_flash/README.md
