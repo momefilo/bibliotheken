@@ -1,6 +1,17 @@
 **Pi Pico Bibliotheken zum Einbinden in Programmcode**\
 In der Datei "bibliotheken.c" finden sich Test- und Beispielcode zum Einbinden der Bibliotheken
 
+* **si4703**\
+Eine Komfortbibliothek welche zwei RDS- und eine Tuning/Seeking- Callbackfunktionen bereitstellt.\
+Es muessen nur die Ii2c/GPIO zur initialisierung, sowie drei einfache Callbackfunktionen an eine\
+eine German-default-Setup-Funktion übergeben werden um den chip umfänglich mit\
+void si4703_seeking(bool up)\
+void si4703_tuning(float_t mhz)\
+void si4703_tuneSpace(uint8_t steps, bool up)\
+void si4703_stepVolume(bool up)\
+void si4703_setSeekQuality(uint8_t quality)-Funktion. als Radio zu nutzen\
+Genaueres siehe si4703/readme.md
+
 * **SI5351**\
 Diese Bibliothek bietet zwei voneinender unabhängige Taktgeber mit einem si5351.\
 Der Frequenzbereich ist 8kHz bis 160Mhz.\
